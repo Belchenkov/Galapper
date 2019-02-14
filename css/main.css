@@ -8564,6 +8564,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 body {
   background: #00796b;
+  color: #fff;
 }
 
 .main-header {
@@ -8575,4 +8576,11 @@ body {
 .main-header h1 {
   margin: 0;
   padding-top: 30px;
+}
+
+.img-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
 }
