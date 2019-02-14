@@ -66,7 +66,7 @@
             <div class="card-image">
               <img src="./img/gallery/abstract1.jpg" alt="Abstract1">
               <span class="card-title">Diligord</span>
-              <a href="#abstract" class="btn-floating halfway-fab waves-effect waves-light red modal-trigger">
+              <a href="#abstract1" class="btn-floating halfway-fab waves-effect waves-light red modal-trigger">
                 <i class="material-icons">add</i>
               </a>
             </div>
@@ -128,7 +128,7 @@
             <div class="card-image">
               <img src="./img/gallery/abstract3.jpg" alt="Abstract3">
               <span class="card-title">Recogged</span>
-              <a href="#abstract" class="btn-floating halfway-fab waves-effect waves-light red modal-trigger">
+              <a href="#abstract3" class="btn-floating halfway-fab waves-effect waves-light red modal-trigger">
                 <i class="material-icons">add</i>
               </a>
             </div>
@@ -147,14 +147,138 @@
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About Me</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, harum.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="index.html">Abstract</a></li>
+            <li><a class="grey-text text-lighten-3" href="logos.html">Logos</a></li>
+            <li><a class="grey-text text-lighten-3" href="gaming.html">Gaming</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2019 Galappear
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
 
+  <!-- Modal 1 -->
+  <div id="abstract1" class="modal">
+    <div class="modal-content">
+      <h4>Diligord</h4>
+      <div>
+        <img src="./img/gallery/abstract1.jpg" alt="Abstract" class="responsive-img">
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque blanditiis ducimus eius est
+        fuga laboriosam necessitatibus nostrum sequi suscipit?
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star_half</i>
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="abstract2" class="modal">
+    <div class="modal-content">
+      <h4>Alerassa</h4>
+      <div>
+        <img src="./img/gallery/abstract2.jpg" alt="Abstract2" class="responsive-img">
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque blanditiis ducimus eius est
+        fuga laboriosam necessitatibus nostrum sequi suscipit?
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star_half</i>
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="abstract3" class="modal">
+    <div class="modal-content">
+      <h4>Recogged</h4>
+      <div>
+        <img src="./img/gallery/abstract3.jpg" alt="Abstract3" class="responsive-img">
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque blanditiis ducimus eius est
+        fuga laboriosam necessitatibus nostrum sequi suscipit?
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star_half</i>
+      </p>
+    </div>
+  </div>
+  
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script>
     $(document).ready(function () {
+      // Init SideNav
       $('.button-collapse').sideNav();
-      
+
+      // Init Modal
+      $('.modal').modal();
+
+      // Scrollfire
+        const option = [
+            {
+                selector: '.row-1',
+                offset: 50,
+                callback: function (el) {
+                    Materialize.fadeInImage($(el));
+                }
+            },
+            {
+                selector: '.row-2',
+                offset: 300,
+                callback: function (el) {
+                    Materialize.fadeInImage($(el));
+                }
+            },
+            {
+                selector: '.row-3',
+                offset: 400,
+                callback: function (el) {
+                    Materialize.fadeInImage($(el));
+                }
+            }
+        ];
+
+        Materialize.scrollFire(option);
     });
   </script>
 </body>

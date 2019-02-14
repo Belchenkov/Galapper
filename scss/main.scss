@@ -36,3 +36,31 @@ body {
   justify-content: center;
   height: 300px;
 }
+
+.card-content {
+  color: $primary-color;
+}
+
+.page-footer {
+  background: $secondary-color;
+
+  .footer-copyright {
+    background: $secondary-color-light;
+  }
+}
+
+.modal {
+  color: #333;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+  opacity: 0;
+}

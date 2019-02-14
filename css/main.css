@@ -8584,3 +8584,30 @@ body {
   justify-content: center;
   height: 300px;
 }
+
+.card-content {
+  color: #00796b;
+}
+
+.page-footer {
+  background: #212121;
+}
+.page-footer .footer-copyright {
+  background: #424242;
+}
+
+.modal {
+  color: #333;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+  opacity: 0;
+}
